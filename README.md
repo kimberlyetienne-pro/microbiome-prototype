@@ -16,7 +16,7 @@ Built to explore product thinking, UX clarity, and microbiome-inspired logic.
 Open `index.html` in any browser.
 
 ## Deploying
-The project is fully static and can be deployed to Netlify, Vercel, or GitHub Pages.
+The project is fully static and deployed to Netlify.
 
 —
 Kimberly
