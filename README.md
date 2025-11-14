@@ -27,4 +27,6 @@ The project is fully static and can be deployed to Netlify, Vercel, or GitHub Pa
 \
 \'97\
 Kimberly\
+\
+Live Demo: https://th-demo-kimi.netlify.app\
 }
