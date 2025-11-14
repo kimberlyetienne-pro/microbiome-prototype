@@ -1,0 +1,548 @@
+300;400;500;600;700&display=swap');
+        
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 200;
+            background: linear-gradient(135deg, #fef7ff 0%, #f0f9ff 50%, #f0fff4 100%);
+            min-height: 100%;
+        }
+
+
+        html, body {
+            height: 100%;
+        }
+
+
+        .landing-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            padding: 2rem;
+        }
+
+
+        .landing-content {
+            max-width: 600px;
+            width: 100%;
+        }
+
+
+        .results-ready-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem auto;
+            animation: pulse 2s infinite;
+        }
+
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+
+        .landing-content h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #6b46c1;
+            line-height: 1.2;
+        }
+
+
+        .landing-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+
+        .patient-summary {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+
+
+        .summary-label {
+            font-weight: 500;
+            color: #475569;
+        }
+
+
+        .summary-value {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+
+        .results-preview {
+            margin-bottom: 2.5rem;
+        }
+
+
+        .preview-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: linear-gradient(135deg, #fef7ff 0%, #f0f9ff 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #6b46c1;
+            margin-bottom: 0.25rem;
+        }
+
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+
+        .view-results-button {
+            background: linear-gradient(135deg, #6b46c1 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+
+        .view-results-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
+        }
+
+
+        .view-results-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100%;
+        }
+
+
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            position: relative;
+        }
+
+
+        .header-content {
+            text-align: center;
+        }
+
+
+        .header h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #6b46c1;
+        }
+
+
+        .back-button {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #475569;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+
+        .back-button:hover {
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+            transform: translateY(-1px);
+        }
+
+
+        .back-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+
+        .patient-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 200;
+        }
+
+
+        .patient-info span {
+            background: linear-gradient(135deg, #fef3c7 0%, #ddd6fe 100%);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+
+        .markers-panel, .insights-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+
+        .panel-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #6b46c1;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+
+        .panel-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+
+        .marker-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #fef7ff 0%, #f0f9ff 100%);
+            border-radius: 16px;
+            border-left: 4px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+
+        .marker-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);
+        }
+
+
+        .marker-item.low {
+            border-left-color: #f87171;
+            background: linear-gradient(135deg, #fef2f2 0%, #fef7ff 100%);
+        }
+
+
+        .marker-item.high {
+            border-left-color: #fb923c;
+            background: linear-gradient(135deg, #fff7ed 0%, #fef7ff 100%);
+        }
+
+
+        .marker-item.optimal {
+            border-left-color: #34d399;
+            background: linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%);
+        }
+
+
+        .marker-name {
+            font-weight: 300;
+            color: #374151;
+        }
+
+
+        .marker-status {
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+        }
+
+
+        .status-low {
+            background: linear-gradient(135deg, #fecaca 0%, #f3e8ff 100%);
+            color: #dc2626;
+        }
+
+
+        .status-high {
+            background: linear-gradient(135deg, #fed7aa 0%, #f3e8ff 100%);
+            color: #ea580c;
+        }
+
+
+        .status-optimal {
+            background: linear-gradient(135deg, #bbf7d0 0%, #dbeafe 100%);
+            color: #059669;
+        }
+
+
+        .insight-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #fef7ff 100%);
+            border-radius: 16px;
+            border-left: 4px solid #a78bfa;
+        }
+
+
+        .insight-title {
+            font-weight: 600;
+            color: #6b46c1;
+            margin-bottom: 0.5rem;
+        }
+
+
+        .insight-description {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            font-weight: 200;
+        }
+
+
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+
+        .recommendation-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+
+
+        .recommendation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(139, 92, 246, 0.2);
+        }
+
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            font-size: 24px;
+        }
+
+
+        .diet-icon {
+            background: linear-gradient(135deg, #dcfce7 0%, #dbeafe 100%);
+        }
+
+
+        .lifestyle-icon {
+            background: linear-gradient(135deg, #dbeafe 0%, #f3e8ff 100%);
+        }
+
+
+        .stress-icon {
+            background: linear-gradient(135deg, #f3e8ff 0%, #fef7ff 100%);
+        }
+
+
+        .environment-icon {
+            background: linear-gradient(135deg, #fef3c7 0%, #dcfce7 100%);
+        }
+
+
+        .card-title {
+            font-weight: 600;
+            color: #374151;
+            font-size: 1.1rem;
+        }
+
+
+        .recommendation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .recommendation-list li {
+            padding: 0.5rem 0;
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            border-bottom: 1px solid #f1f5f9;
+            font-weight: 200;
+        }
+
+
+        .recommendation-list li:last-child {
+            border-bottom: none;
+        }
+
+
+        .recommendation-list li::before {
+            content: "→";
+            color: #a78bfa;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+
+        @media (max-width: 768px) {
+            .landing-container {
+                padding: 1rem;
+            }
+
+
+            .results-ready-card {
+                padding: 2rem;
+            }
+
+
+            .landing-content h1 {
+                font-size: 2rem;
+            }
+
+
+            .preview-stats {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+
+            .view-results-button {
+                width: 100%;
+                justify-content: center;
+            }
+
+
+            .dashboard-container {
+                padding: 1rem;
+            }
+
+
+            .header {
+                padding: 1.5rem;
+            }
+
+
+            .back-button {
+                position: static;
+                margin-bottom: 1rem;
+                width: fit-content;
+            }
+
+
+            .header-content {
+                text-align: left;
+            }
+
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+
+            .patient-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+
+            .recommendations-grid {
+                grid-template-columns: 1fr;
+            }
+        }

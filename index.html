@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microbiome Insights Demo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+<!-- Landing Page -->
+  <main id="landing-page" class="landing-container">
+   <div class="landing-content">
+    <div class="results-ready-card">
+     <div class="success-icon">
+      <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="#10b981" /> <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+     </div>
+     <h1 id="landing-title">Your Microbiome Results Are Ready!</h1>
+     <p class="landing-subtitle">We've analyzed your sample and compiled personalized insights and recommendations.</p>
+     <div class="patient-summary">
+      <div class="summary-item"><span class="summary-label">Patient:</span> <span class="summary-value" id="landing-patient-name">Sarah M.</span>
+      </div>
+      <div class="summary-item"><span class="summary-label">Test Date:</span> <span class="summary-value" id="landing-test-date">December 2024</span>
+      </div>
+      <div class="summary-item"><span class="summary-label">Sample Type:</span> <span class="summary-value">Stool Analysis</span>
+      </div>
+     </div>
+     <div class="results-preview">
+      <div class="preview-stats">
+       <div class="stat-item">
+        <div class="stat-number">
+         6
+        </div>
+        <div class="stat-label">
+         Markers Analyzed
+        </div>
+       </div>
+       <div class="stat-item">
+        <div class="stat-number">
+         3
+        </div>
+        <div class="stat-label">
+         Key Insights
+        </div>
+       </div>
+       <div class="stat-item">
+        <div class="stat-number">
+         20+
+        </div>
+        <div class="stat-label">
+         Recommendations
+        </div>
+       </div>
+      </div>
+     </div><button id="view-results-btn" class="view-results-button"> <span>View Detailed Results</span>
+      <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg></button>
+    </div>
+   </div>
+  </main><!-- Dashboard Page -->
+  <main id="dashboard-page" class="dashboard-container" style="display: none;">
+   <header class="header">
+    <div class="header-content">
+     <h1 id="main-title">Your Microbiome Insights</h1>
+     <div class="patient-info"><span><strong>Patient:</strong> <span id="patient-name">Sarah M.</span></span> <span><strong>Test Date:</strong> <span id="test-date">December 2024</span></span> <span><strong>Sample Type:</strong> Stool Analysis</span>
+     </div>
+     <div style="margin-top: 1rem; text-align: center;">
+      <div style="color: #374151; font-weight: 500; margin-bottom: 0.25rem;">
+       Profile: Adult Gut (prototype)
+      </div><small style="color:#6b7280; font-style: italic;">Infant microbiome insights not shown in this demo.</small>
+     </div>
+    </div><button id="back-to-landing-btn" class="back-button">
+     <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+     </svg> Back to Summary </button>
+   </header>
+   <div class="main-content">
+    <section class="markers-panel">
+     <h2 class="panel-title">
+      <svg class="panel-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17C15.24 5.06 14.32 5 13.4 5C10.2 5 7.13 5.69 4.42 7.01C2.84 7.76 2 9.38 2 11.07V20C2 21.1 2.9 22 4 22H6C7.1 22 8 21.1 8 20V14.91C8.8 14.62 9.63 14.38 10.5 14.2V20C10.5 21.1 11.4 22 12.5 22H14.5C15.6 22 16.5 21.1 16.5 20V14.2C17.37 14.38 18.2 14.62 19 14.91V20C19 21.1 19.9 22 21 22H22C22.55 22 23 21.55 23 21S22.55 20 22 20H21V9Z" fill="#a78bfa" />
+      </svg> Microbiome Markers</h2>
+     <div id="markers-container"></div>
+    </section>
+    <section class="insights-panel">
+     <h2 class="panel-title">
+      <svg class="panel-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM12 8C15.31 8 18 10.69 18 14C18 17.31 15.31 20 12 20C8.69 20 6 17.31 6 14C6 10.69 8.69 8 12 8ZM12 10C9.79 10 8 11.79 8 14C8 16.21 9.79 18 12 18C14.21 18 16 16.21 16 14C16 11.79 14.21 10 12 10ZM12 12C13.1 12 14 12.9 14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 10.9 12 12 12Z" fill="#a78bfa" />
+      </svg> Key Insights</h2>
+     <div id="insights-container"></div>
+    </section>
+   </div>
+   <section class="recommendations-grid" id="recommendations-container">
+   </section>
+  </main>
+    <script src="script.js"></script>
+  </body>
+</html>
